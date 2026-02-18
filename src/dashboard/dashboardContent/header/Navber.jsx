@@ -1,6 +1,7 @@
-import { useState } from "react";
-
+import { useContext, useState } from "react";
+import { ThemeContext } from "../../../context";
 const Navber = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [search, setSearch] = useState("");
 
   return (
@@ -25,11 +26,14 @@ const Navber = () => {
 
       {/* Right Side */}
       <div className="flex items-center gap-3 ml-4">
-        <button className="border border-gray-300 px-3 py-1 rounded-md hover:bg-gray-100">
-          Dark
+        <button
+          onClick={toggleTheme}
+          className="border border-gray-300 px-3 py-1 rounded-md"
+        >
+          {theme === "light" ? "Dark" : "Light"}
         </button>
 
-        <button className="border border-gray-300 px-3 py-1 rounded-md hover:bg-gray-100">
+        <button className="border border-gray-300 px-3 py-1 rounded-md ">
           Add
         </button>
 
