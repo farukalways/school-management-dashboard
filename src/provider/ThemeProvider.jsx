@@ -6,9 +6,9 @@ export const ThemeProvider = ({ children }) => {
     return localStorage.getItem("theme") || "light";
   });
 
-  // theme change হলে body তে class add/remove
   useEffect(() => {
-    document.body.className = theme;
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 

@@ -3,18 +3,17 @@
 :root {
   --custom-white: #efeff2;
   --custom-dark: #202c4b;
+  --custom-background: #0f0c1c;
 }
 
-body.light {
+html.light {
   background-color: var(--custom-white);
   color: var(--custom-dark);
-  transition: 0.3s ease;
 }
 
-body.dark {
-  background-color: var(--custom-dark);
+html.dark {
+  background-color: var(--custom-background);
   color: var(--custom-white);
-  transition: 0.3s ease;
 }
 
 .flex-center {

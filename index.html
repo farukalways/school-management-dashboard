@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>school management dashboard</title>
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.classList.add(savedTheme);
+
+      if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.add("light");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
